@@ -10,9 +10,14 @@ public class Students extends People<Student> {
         super(personList);
     }
 
+    public Students(Student...students){
+        super(students);
+    }
+
     @Override
     public Iterator<Student> iterator() {
-        return null;
+
+        return findAll().iterator();
     }
 
 }

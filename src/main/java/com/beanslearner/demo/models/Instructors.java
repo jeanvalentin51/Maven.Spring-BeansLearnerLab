@@ -10,8 +10,12 @@ public class Instructors extends People<Instructor> {
         super(personList);
     }
 
+    public Instructors(Instructor...instructors){
+        super(instructors);
+    }
+
     @Override
     public Iterator<Instructor> iterator() {
-        return null;
+        return findAll().iterator();
     }
 }

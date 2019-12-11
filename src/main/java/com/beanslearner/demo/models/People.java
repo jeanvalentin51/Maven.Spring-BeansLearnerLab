@@ -1,5 +1,6 @@
 package com.beanslearner.demo.models;
 
+import java.util.Arrays;
 import java.util.List;
 
 public abstract class People<PersonType extends Person> implements Iterable<PersonType> {
@@ -7,6 +8,10 @@ public abstract class People<PersonType extends Person> implements Iterable<Pers
 
     public People(List<PersonType> personList){
         this.personList = personList;
+    }
+
+    public People(PersonType...students) {
+        this.personList = Arrays.asList(students);
     }
 
     public void add (PersonType person){
