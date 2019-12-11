@@ -15,12 +15,12 @@ class ClassroomConfigTest {
 
     @Autowired
     @Qualifier("currentCohort") // from Classroom config
-    Classroom currentCohort;
+    private Classroom currentCohort;
 
 
     @Autowired
     @Qualifier("previousCohort")
-    Classroom previousCohort;
+    private Classroom previousCohort;
 
     @Test
     public void previousCohortTest(){
